@@ -18,11 +18,7 @@ def solution2(a)
  full_n = (1..sizeFull).to_a
  missingNum = full_n - a
 
- if missingNum.empty?
-  return a[-1] + 1
- else
-  return missingNum[0]
- end
+ return missingNum[0] ||= a.length + 1
 
 end
 
